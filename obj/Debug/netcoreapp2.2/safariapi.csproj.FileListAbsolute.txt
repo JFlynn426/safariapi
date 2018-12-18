@@ -1,0 +1,14 @@
+C:\Users\User\sdg\unit-9\safariapi\bin\Debug\netcoreapp2.2\safariapi.deps.json
+C:\Users\User\sdg\unit-9\safariapi\bin\Debug\netcoreapp2.2\safariapi.runtimeconfig.json
+C:\Users\User\sdg\unit-9\safariapi\bin\Debug\netcoreapp2.2\safariapi.runtimeconfig.dev.json
+C:\Users\User\sdg\unit-9\safariapi\bin\Debug\netcoreapp2.2\safariapi.dll
+C:\Users\User\sdg\unit-9\safariapi\bin\Debug\netcoreapp2.2\safariapi.pdb
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.csprojAssemblyReference.cache
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.csproj.CoreCompileInputs.cache
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.RazorAssemblyInfo.cache
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.RazorAssemblyInfo.cs
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.AssemblyInfoInputs.cache
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.AssemblyInfo.cs
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.RazorTargetAssemblyInfo.cache
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.dll
+C:\Users\User\sdg\unit-9\safariapi\obj\Debug\netcoreapp2.2\safariapi.pdb

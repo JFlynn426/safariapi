@@ -18,7 +18,7 @@ namespace safariapi.Controllers
       var Animals = db.APIAnimals.OrderBy(animal => animal.Species);
       return Animals.ToList();
     }
-    [HttpPost]
+    [HttpPost("{AddedAnimal}")]
     public ActionResult<APIAnimals> AddAnimal([FromBody] APIAnimals AddedAnimal)
     {
       var db = new APIAnimalsContext();
@@ -26,22 +26,37 @@ namespace safariapi.Controllers
       db.SaveChanges();
       return AddedAnimal;
     }
-    // [HttpGet]
-    // public ActionResult<APIAnimals> GetLocation([FromRoute] APIAnimals Location)
-    // {
-    //   var db = new APIAnimalsContext();
-    //   var result = db.APIAnimals.Where(animal => animal.LocationOfLastSeen == Location.ToString());
-    //   return result.ToList();
-    // }
-    [HttpPut]
-    public ActionResult<APIAnimals> AddSighting([FromRoute] APIAnimals animal)
+    [HttpGet("{Location}")]
+    public ActionResult<IEnumerable<APIAnimals>> GetLocation([FromRoute] string Location)
     {
       var db = new APIAnimalsContext();
-      var SelectedAnimal = db.APIAnimals.Where(animals => animals.Species == animal.ToString());
-
-      db.SaveChanges();
+      var result = db.APIAnimals.Where(animal => animal.LocationOfLastSeen.Contains(Location.ToString()));
+      return result.ToList();
     }
-    [HttpDelete]
-    pu
+    [HttpPut("{animal}")]
+    public ActionResult<APIAnimals> AddSighting([FromRoute] string animal)
+    {
+      var db = new APIAnimalsContext();
+      var SelectedAnimal = db.APIAnimals.FirstOrDefault(animals => animals.Species == animal.ToString());
+      if (SelectedAnimal == null)
+      {
+        return NotFound();
+      }
+      else
+      {
+        SelectedAnimal.CountOfTimesSeen++;
+        db.SaveChanges();
+        return SelectedAnimal;
+      }
+    }
+    [HttpDelete("{id}")]
+    public ActionResult<APIAnimals> DeleteAction([FromRoute] int id)
+    {
+      var db = new APIAnimalsContext();
+      var AnimalToDelete = db.APIAnimals.FirstOrDefault(animals => animals.ID == id);
+      db.APIAnimals.Remove(AnimalToDelete);
+      db.SaveChanges();
+      return AnimalToDelete;
+    }
   }
 }
